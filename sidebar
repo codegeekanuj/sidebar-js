@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navnbar</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </head>
+  <style>
+    * {
+      margin: 0rem;
+      padding: 0rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: rgb(197, 219, 212);
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .links {
+      display: flex;
+      gap: 2rem;
+    }
+    #mobile-nav-button {
+      display: none;
+    }
+
+    #mobile-nav-button {
+      font-size: 2.5rem;
+    }
+    #slider {
+      font-size: 1.5rem;
+    }
+    .inactive {
+      display: none;
+      position: absolute;
+      right: -100%;
+    }
+    .active {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      position: absolute;
+      padding-top: 30%;
+      right: 0;
+      background-color: rgb(197, 219, 212);
+      height: 80vh;
+      width: 50%;
+      transition: 0.5s ease-in-out;
+    }
+
+    /* -------------responsive----------- */
+
+    @media (max-width: 62rem) {
+      #mobile-nav-button {
+        display: block;
+      }
+
+      nav {
+        height: 100%;
+        background-color: rgb(197, 219, 212);
+      }
+      .links {
+        flex-direction: column;
+        position: absolute;
+        top: -100%;
+        right: 0;
+        gap: 3.5rem;
+      }
+    }
+  </style>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png"
+          height="40rem"
+          width="40rem"
+          alt=""
+        />
+      </div>
+      <div class="links">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Team</a></li>
+        <li><a href="">Contact</a></li>
+      </div>
+      <div id="mobile-nav-button">
+        <ion-icon name="menu-outline" class="anuj"></ion-icon>
+        <ion-icon name="close-outline" class="cross"></ion-icon>
+      </div>
+    </nav>
+    <aside id="slider" class="inactive">
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">Team</a></li>
+      <li><a href="">Contact</a></li>
+    </aside>
+    <script src="menu.js"></script>
+  </body>
+</html>
+
